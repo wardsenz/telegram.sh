@@ -330,7 +330,7 @@ shift $((OPTIND - 1))
 TEXT="$1"
 log "Text: $TEXT"
 
-[ "$TEXT" = "-" ] && TEXT=$(</dev/stdin)
+[ "$TEXT" = "-" ] && TEXT=$(</proc/self/fd/0)
 
 log "Text: $TEXT"
 
